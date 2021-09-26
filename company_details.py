@@ -7,7 +7,7 @@ def read_company_names_produce_details() -> None:
     company_file = open("company_file.csv", "w")
     company_list = companies.split("\n")
     count = 0
-    cut_out = ["and", "if", "or", "at", "but", "for"]
+    cut_out = ["and", "if", "or", "at", "but", "for"]  # list of words to exclude from capitalization.
 
     for company in company_list:
         if company == "":
