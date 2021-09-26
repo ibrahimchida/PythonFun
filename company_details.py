@@ -11,7 +11,7 @@ def read_company_names_produce_details() -> None:
 
     for company in company_list:
         if company == "":
-            continue
+            continue 
         count += 1
         acronym = ""
         split_company = company.split()
