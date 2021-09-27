@@ -32,9 +32,9 @@ def read_company_names_produce_details() -> None:
                         acronym += word[0].upper()  # if it's not, the program concatenates the fist letter of the
                         # word to the acronym string.
 
-        total_list = [str(count), company, acronym, "\n"]   # puts the stuff in one list
+        total_list = [str(count), company, acronym]   # puts the stuff in one list
         new_total_list = ", ".join(total_list)
-        company_file.write(new_total_list)  # writes to the new file.
+        company_file.write(f"{new_total_list} \n")  # writes to the new file.
 
     company_file.close()
 
