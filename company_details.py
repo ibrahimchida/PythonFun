@@ -11,7 +11,7 @@ def read_company_names_produce_details() -> None:
     company_file = open("company_file.csv", "w")
     company_list = companies.split("\n")
     count = 0
-    cut_out = ["and", "if", "or", "at", "but", "for", "in", "to"]  # list of words to exclude from capitalization.
+    cut_out = ["and", "a", "at", "an", "for", "in", "to", "the"]   # list of words to exclude from capitalization.
 
     for company in company_list:
         if company == "":
@@ -24,8 +24,8 @@ def read_company_names_produce_details() -> None:
                 if len(split_company) >= 3:         # checks if company name has 3 or more words.
                     acronym += word[0].upper()  # concatenates the first letter of the word to the acronym string.
                 else:
-                    if word == split_company[0]:  # if the name has less than 3 words, the program checks if
-                        # the wor being tested is the first one in the title.
+                    if word == split_company[0]:  # if the company name has less than 3 words, the program checks if
+                        # the word being tested is the first one in the title.
                         acronym += word[:2].upper()           # if so, then the program concatenates the first 2
                         # letters of the first word to the acronym string.
                     else:
