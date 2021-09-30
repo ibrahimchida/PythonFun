@@ -1,6 +1,6 @@
 def flatten(include_non_alpha=True, default_case=True):
     file_to_read = open("contents.txt", "r")
-    file_to_write_to = open("new.txt", "w")
+    file_to_write_to = open("newcontents.txt", "w")
     file_contents = file_to_read.read().split()
     for word in file_contents:
         stripped_word = word.strip('1234567890')
